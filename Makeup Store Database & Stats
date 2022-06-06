@@ -1,0 +1,28 @@
+--Create a makeup store database
+
+CREATE TABLE makeup_store (id INTEGER PRIMARY KEY, item TEXT, brand TEXT, quantity INTEGER, price REAL);
+
+INSERT INTO makeup_store VALUES (1, "Mascara", "Cat Girl", 20, 12);
+INSERT INTO makeup_store VALUES (2, "Concealer", "KAT", 25, 15);
+INSERT INTO makeup_store VALUES (3, "Eye Shadow", "Langato", 15, 18);
+INSERT INTO makeup_store VALUES (4, "Eye Liner", "KAT", 22, 13);
+INSERT INTO makeup_store VALUES (5, "Foundation", "Cat Girl", 10, 18); 
+INSERT INTO makeup_store VALUES (6, "Blush", "GATO", 8, 6); INSERT INTO makeup_store VALUES (7, "Bronzer", "GATO", 10, 12); 
+INSERT INTO makeup_store VALUES (8, "Highlighter", "KAT", 16, 13); 
+INSERT INTO makeup_store VALUES (9, "Lip gloss", "Cat Girl", 19, 7); 
+INSERT INTO makeup_store VALUES (10, "Lipstick", "GATO", 19, 8);
+INSERT INTO makeup_store VALUES (11, "Brow Gel", "GATO", 20, 8);
+INSERT INTO makeup_store VALUES (12, "Setting Spray", "KAT", 22, 11);
+INSERT INTO makeup_store VALUES (13, "Beauty Blender", "GATO", 25, 3);
+INSERT INTO makeup_store VALUES (14, "Eyelash Curler", "KAT", 15, 22);
+INSERT INTO makeup_store VALUES (15, "Contour Brush", "GATO", 20, 14);
+
+--Display the store database ordered by price from most to least expensive
+
+SELECT * FROM makeup_store ORDER BY price ASC;
+
+--What's the most expensive item in the store?
+SELECT item, MAX(price) FROM makeup_store;
+
+--What's the item that has the highest quantity in stock?
+SELECT item, MAX(quantity) FROM makeup_store;
