@@ -1,0 +1,31 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, brand TEXT, quantity INTEGER, price INTEGER); 
+
+INSERT INTO store VALUES (1, "Crew Neck Pink", "Nike", 10, 50);
+INSERT INTO store VALUES (2, "Crew Neck Purple", "Nike", 15, 55);
+INSERT INTO store VALUES (3, "Crew Neck White", "Nike", 12, 48);
+INSERT INTO store VALUES (4, "Crew Neck Black", "Nike", 16, 50);
+INSERT INTO store VALUES (5, "Black Leggings", "BGBG", 20, 25);
+INSERT INTO store VALUES (6, "Blue Leggings", "Gym SHark",1 , 38);
+INSERT INTO store VALUES (7, "Grey Leggings", "Adidas", 18, 28);
+INSERT INTO store VALUES (8, "Black Winter Jacket", "Old Navy", 20, 33);
+INSERT INTO store VALUES (9, "Purple Fleece Jacket", "Columbia", 3, 50);
+INSERT INTO store VALUES (10, "Packaway Purple Jacket", "L.L. Bean", 5, 200);
+INSERT INTO store VALUES (11, "Light Jeggings", "Old Navy", 4, 19);
+INSERT INTO store VALUES (12, "Black Jeggings", "Amazon", 20, 25);
+INSERT INTO store VALUES (13, "Black Blazer", "Maurices", 5, 28);
+INSERT INTO store VALUES (14, "Grey Hoodie", "Costco", 17, 20);
+INSERT INTO store VALUES (15, "Black Scarf", "Gap", 6, 14);
+
+SELECT * FROM store;
+
+/**What is the item that's most expensive?**/
+SELECT brand, max(price) FROM store;
+
+/**What is the item that needs to be restocked the soonest?**/
+SELECT name, min(quantity) FROM store;
+
+/** What is the brand that is sold the most**/
+SELECT brand, max(quantity) FROM store;
+
+/** What is the cheapest brand item in the store**/
+SELECT brand, min(price) FROM store;
